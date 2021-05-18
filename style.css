@@ -1,0 +1,157 @@
+/* Import font from Google Fonts */
+
+
+/* https://fonts.google.com */
+
+@import url(‘https://fonts.googleapis.com/css?family=Bungee|Roboto&display=swap’);
+
+/* Page Styles */
+
+body {
+    background-color: dodgerblue;
+}
+
+
+/* Heading Styles*/
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: ‘Bungee’, cursive;
+}
+
+
+/* Scene */
+
+div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://app.bsd.education/img/0e090696-e6ef-4c66-ba1c-abe107d00c53/background_2.jpg");
+    border: 10px solid darkblue;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 15px;
+    position: relative;
+    max-width: 550px;
+}
+
+
+/* All Objects */
+
+img {
+    /* These values allow the objects to be animated */
+    display: block;
+    position: absolute;
+}
+
+
+/* Object 1 */
+
+#object-1 {
+    animation: turtleSwim 5s infinite;
+    /* Position */
+    top: 30px;
+    /* Size */
+    width: 100px;
+}
+
+
+/* Object 2 */
+
+#object-2 {
+    animation: fishSwim 12s infinite;
+    /* Position */
+    top: 200px;
+    /* Size */
+    width: 130px;
+}
+
+
+/* Text Styles */
+
+p {
+    background-color: white;
+    margin: 0 auto;
+    max-width: 540px;
+    padding: 15px;
+    font-family: ‘Roboto’, sans-serif;
+}
+
+ul {
+    background-color: white;
+    margin: 0 auto;
+    max-width: 540px;
+    padding: 15px;
+}
+
+li {
+    background-color: white;
+    margin-left: 30px;
+    font-family: ‘Roboto’, sans-serif;
+}
+
+
+/* Swim Animation */
+
+@keyframes turtleSwim {
+    /* Start */
+    0% {
+        /* Position */
+        left: 0px;
+        /* Direction */
+        transform: scaleX(1);
+    }
+    /* Move */
+    40% {
+        left: 65%;
+        transform: scaleX(1);
+    }
+    /* Turn Around */
+    50% {
+        left: 65%;
+        transform: scaleX(-1);
+    }
+    /* Move */
+    90% {
+        left: 0px;
+        transform: scaleX(-1);
+    }
+    /* Turn Around */
+    100% {
+        left: 0px;
+        transform: scaleX(1);
+    }
+}
+
+
+/* Swim Animation for fish */
+
+@keyframes fishSwim {
+    /* Start */
+    0% {
+        /* Position */
+        left: 0px;
+         transform:scaleX(-1); 
+    }
+    /* Move */
+    40% {
+        left: 65%;
+        transform: scaleX(-1);
+    }
+    50%{
+        /* Position */
+        left: 65%;	
+        transform:scaleX(1);   
+    }
+    /* Move */
+    90% {
+        left: 0px;
+        transform: scaleX(1);
+    }
+    /* Turn Around */
+    100% {
+        /* Position */
+        left: 0px;
+         transform:scaleX(-1);  
+    }
+}
